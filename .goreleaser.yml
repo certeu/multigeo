@@ -1,0 +1,12 @@
+builds:
+  -
+    main: ./cmd/geoserver/geoserver.go
+    binary: geoserver
+    ldflags: -s -w -X main.buildInfo={{.Version}}
+    goos:
+      - openbsd
+      - freebsd
+      - darwin
+      - linux
+    goarch:
+      - amd64
